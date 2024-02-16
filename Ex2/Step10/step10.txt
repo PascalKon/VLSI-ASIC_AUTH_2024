@@ -1,0 +1,8 @@
+globalNetConnect VDD -type pgpin -pin VDD -inst *
+globalNetConnect VDD -type tiehi -instanceBasename *
+globalNetConnect VSS -type pgpin -pin VSS -inst *
+globalNetConnect VSS -type tielo -instanceBasename *
+
+createPGPin VDD -net VDD -geom Metal10 9 0 12 12
+createPGPin VSS -net VSS -geom Metal10 3 0 6 6
+
