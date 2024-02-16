@@ -1,0 +1,8 @@
+setDesignMode -process 45
+getPlaceMode 
+place_opt_design
+optDesign -preCTS
+
+report_power > innovus_power_step11.txt
+report_timing > innovus_timing_step11.txt
+report_area > innovus_area_step11.txt
