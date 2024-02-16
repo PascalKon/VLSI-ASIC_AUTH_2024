@@ -1,0 +1,7 @@
+setDelayCalMode -engine aae -SIAware true
+setAnalysisMode -analysisType onChipVariation -cppr both
+optDesign -postRoute -setup -hold
+
+report_power > report_power_step15.txt
+report_area > report_area_step15.txt
+report_timing > report_timing_step15.txt
