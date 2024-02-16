@@ -1,0 +1,11 @@
+Each version respond to a different sdc settup.
+
+v1
+	with extra commands - set_propagated_clock
+
+v2 
+	with extra commands - set_propagated_clock
+			    - set_ideal_network [get_ports {clk}]
+
+v3 
+	with no extra commands
