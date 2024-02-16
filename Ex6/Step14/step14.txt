@@ -1,0 +1,20 @@
+
+create_route_type -top_preferred_layer 9 -bottom_preferred_layer 5 -non_default_rule NDR_13 -name t_route -preferred_routing_layer_effort high
+set_ccopt_property -net_type trunk -route_type t_route
+set_ccopt_property target_skew 0.2
+set_ccopt_property target_max_trans 0.2
+
+create_route_type -top_preferred_layer 9 -bottom_preferred_layer 5 -name l_route -preferred_routing_layer_effort high
+set_ccopt_property -net_type leaf -route_type l_route
+set_ccopt_property target_skew 0.2
+set_ccopt_property target_max_trans 0.2
+ 
+create_ccopt_clock_tree_spec -file step14_1.spec
+
+ccopt_design
+optDesign -postCTS
+report_power > report_power_step14.txt
+report_area > report_area_step14.txt
+report_timing > report_timing_step14.txt
+report_ccopt_clock_trees > report_ccopt_clock_trees_step14.txt
+report_ccopt_skew_groups > report_ccopt_skew_groups_step14.txt
